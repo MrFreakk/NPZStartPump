@@ -12,10 +12,12 @@ public class GameManager : MonoBehaviour
     public Gassmaskcollision collisionGassmask;
 
     public GameObject Door;
+    public GameObject Steam;
     // Start is called before the first frame update
     void Start()
     {
         doorOpenScore = 0;
+        Steam.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class GameManager : MonoBehaviour
         if (doorOpenScore == 4)
         {
             DoorOpen();
+            Steam.SetActive(true);
         }
         
     }
